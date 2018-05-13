@@ -1,0 +1,9 @@
+<section class="user_info">
+  <h1>
+    <%= @user.name %>
+    <%= @user.email %>
+    <% if !@current_user.nil? %>
+      <span>Logged in as: <%= @current_user.name %></span>
+    <% end %> 
+  </h1>
+</section>
