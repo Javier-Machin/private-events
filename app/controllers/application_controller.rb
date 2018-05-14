@@ -15,4 +15,11 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
+  def logged_in_user
+    if current_user.nil?
+      flash[:alert] = "Please log in."
+      redirect_to login_url
+    end
+  end
+
 end

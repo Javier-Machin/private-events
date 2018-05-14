@@ -1,9 +1,12 @@
 <section class="user_info">
-  <h1>
-    <%= @user.name %>
-    <%= @user.email %>
-    <% if !@current_user.nil? %>
-      <span>Logged in as: <%= @current_user.name %></span>
-    <% end %> 
-  </h1>
+  <h2><%= @user.name %></h2>
+  <h2><%= @user.email %></h2>
+  <h3>Events by this user: </h3>
+  <% @user.events.each do |event| %>
+    <h3><%= event.name %></h3>
+    <p><%=  event.description %></p>
+  <% end %>
+  <% if !@current_user.nil? %>
+    <h3>Logged in as: <%= @current_user.name %></h3>
+  <% end %>   
 </section>

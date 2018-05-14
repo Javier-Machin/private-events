@@ -1,0 +1,14 @@
+<%= form_for(@event) do |f| %>
+  <%= f.label :name, 'Event name: ' %> 
+  <p><%= f.text_field :name %></p>
+  <%= f.label :description, 'Event description: ' %> 
+  <p><%= f.text_area :description, size: "25x6" %></p>
+  <%= f.label :date, 'Event date: ' %>
+  <%= f.date_field :date, min: Date.today %> 
+  <%= f.submit "Submit" %>
+<% end %>
+<ul>
+  <% @event.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
