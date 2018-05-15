@@ -5,16 +5,24 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def index
+    @events = Event.all
+  end
+
   def create
     @event = current_user.events.create(name: params[:event][:name], 
                                         description: params[:event][:description], 
                                         date: params[:event][:date])
 
     if @event.save
-      redirect_to current_user
+      redirect_to @event
     else
       render :new
     end
+  end
+
+  def show 
+    @event = Event.find(params[:id])
   end
 
 end
