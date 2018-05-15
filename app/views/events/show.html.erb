@@ -1,2 +1,7 @@
-<h3><%= @event.name %></h3>
-<p><%=  @event.description %></p>
+<h1><%= @event.name %></h1>
+<h2><%=  @event.description %></h2>
+<% unless @event.attendees.blank? %>
+  <% @event.attendees.each do |attendee| %>
+    <h3><%= attendee.name %></h3>
+  <% end %>
+<% end %>
