@@ -1,0 +1,9 @@
+<div class="Navbar">
+  <a href="<%= root_path %>">Home</a>
+  <a href="<%= new_event_path %>">New Event</a>
+  <% if current_user.nil? %>
+    <a href="<%= login_path %>">Login</a>
+  <% else %>
+    <a><%= link_to "Log out", logout_path, method: :delete%></a>
+  <% end %>
+</div>
