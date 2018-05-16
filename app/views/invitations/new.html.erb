@@ -1,0 +1,7 @@
+<%= form_for @invitation do |f| %>
+  <%= f.label :event, 'Event: ' %>
+  <%= f.collection_select :event, Event.where("creator_id = ?", @current_user.id), :id, :name %>
+  <%= f.label :invited_user, 'Invitation for: ' %> 
+  <%= f.text_field :invited_user %>
+  <%= f.submit "Submit" %>
+<% end %>
