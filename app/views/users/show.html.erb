@@ -13,8 +13,5 @@
      <% @user.events_as_attendee.each do |event| %>
       <h3><%= event.name %></h3>
     <% end %>
-  <% end %>
-  <% if !@current_user.nil? %>
-    <h3>Logged in as: <%= @current_user.name %></h3>
-  <% end %>   
+  <% end %> 
 </section>

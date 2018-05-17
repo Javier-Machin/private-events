@@ -1,9 +1,12 @@
 <div class="Navbar">
-  <a href="<%= root_path %>">Home</a>
-  <a href="<%= new_event_path %>">New Event</a>
+  <a href="<%= root_path %>">Home</a>  
   <% if current_user.nil? %>
     <a href="<%= login_path %>">Login</a>
   <% else %>
-    <a><%= link_to "Log out", logout_path, method: :delete%></a>
+    <a href="<%= new_event_path %>">New Event</a>
+    <a href="<%= new_invitation_path %>">Invite Users</a>
+    <span id=Current_user>Logged as: <%= current_user.name %></span>
+    <span id=Logout_link><a><%= link_to "Log out", logout_path, method: :delete%></a></span>
+    <span id=Pending_link><a><%= link_to "Pending Invitations", pending_path%></a></span>
   <% end %>
 </div>

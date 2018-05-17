@@ -5,3 +5,9 @@
   <%= f.text_field :invited_user %>
   <%= f.submit "Submit" %>
 <% end %>
+
+<ul>
+  <% @invitation.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>

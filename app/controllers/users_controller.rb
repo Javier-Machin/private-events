@@ -18,4 +18,8 @@ class UsersController < ApplicationController
     current_user
   end
 
+  def pending_invitations
+    @invitations = current_user.invitations_received.all
+  end
+
 end
