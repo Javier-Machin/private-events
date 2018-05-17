@@ -1,4 +1,4 @@
-<%= @invitations.class %>
 <% @invitations.each do |inv| %>
-  <h3><%= inv.invitation.event.name %></h3>
+  <h3>Event: <%= inv.event.name %></h3>
+  <h3>Invited by: <%= inv.user.name %></h3>
 <% end %>

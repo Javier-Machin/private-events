@@ -1,5 +1,5 @@
 class InvitationsController < ApplicationController
-  before_action :logged_in_user, only: [:new,:create, :pending_invitations]
+  before_action :logged_in_user, only: [:new,:create]
   def new
     @invitation = Invitation.new
   end
@@ -20,8 +20,4 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
   end
   
-  def pending_invitations
-    @invitations = Invitation.where(invited_user: current_user).all
-  end
-
 end

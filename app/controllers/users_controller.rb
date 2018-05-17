@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:pending_invitation]
   def new
     @user = User.new 
   end
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def pending_invitations
-    @invitations = current_user.invitations_received
+    @invitations = current_user.invitations_received.all
   end
 
 end
