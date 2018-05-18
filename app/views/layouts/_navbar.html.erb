@@ -2,11 +2,13 @@
   <a href="<%= root_path %>">Home</a>  
   <% if current_user.nil? %>
     <a href="<%= login_path %>">Login</a>
+    <a href="<%= signup_path %>">Sign up</a>
   <% else %>
     <a href="<%= new_event_path %>">New Event</a>
     <a href="<%= new_invitation_path %>">Invite Users</a>
     <span id=Current_user>Logged as: <%= current_user.name %></span>
     <span id=Logout_link><a><%= link_to "Log out", logout_path, method: :delete%></a></span>
-    <span id=Pending_link><a><%= link_to "Pending Invitations", pending_path%></a></span>
+    <span id=Profile_link><a><%= link_to "My profile", profile_path %></a></span>
+    <span id=Pending_link><a><%= link_to "Pending Invitations", pending_path %></a></span>
   <% end %>
 </div>

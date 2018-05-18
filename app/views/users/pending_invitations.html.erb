@@ -1,4 +1,5 @@
 <% @invitations.each do |inv| %>
   <h3>Event: <%= inv.event.name %></h3>
   <h3>Invited by: <%= inv.user.name %></h3>
+  <%= link_to 'Accept Invitation', accept_inv_path(invitation_id: inv.id), method: :patch %>
 <% end %>
