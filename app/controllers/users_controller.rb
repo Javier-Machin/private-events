@@ -24,9 +24,8 @@ class UsersController < ApplicationController
   end
 
   def accept_invitation
-    @invitation = Invitation.find(params[:invitation_id])
-    @event = @invitation.event
-    current_user.events_as_attendee << @event
+    @invitation = Invitation.find(params[:id])
+    current_user.events_as_attendee << @invitation.event
     current_user.save
     redirect_to pending_path
   end

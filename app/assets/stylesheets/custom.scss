@@ -32,3 +32,35 @@
   display: inline-block;
 }
 
+.Event_description {
+  background-color: white;
+  font-weight: bold;
+  position: absolute;
+  visibility: hidden;
+  transform: scale(0.6);
+  width: 100px;
+  opacity: 0;
+  transition: opacity 0.3s linear,transform 0.2s;
+  border-top: 10px solid purple;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  top: 150px;
+  left: 20%;
+}
+
+.Event_title {
+  cursor: pointer;
+  color: blue;
+  transition: color 0.4s linear;
+}
+
+.Event_title:hover + .Event_description {
+  visibility: visible; 
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Event_title:hover {
+  color: darkblue;
+}

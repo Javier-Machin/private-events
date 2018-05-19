@@ -1,17 +1,26 @@
 <section class="user_info">
-  <h2><%= @user.name %></h2>
-  <h2><%= @user.email %></h2>
+  <h2>WELCOME <%= @user.name %>!</h2>
   <% unless @user.events.blank? %>
-    <h3>Events created by this user: </h3>
+    <h3>Your events: </h3>
     <% @user.events.each do |event| %>
-      <h3><%= event.name %></h3>
-      <p><%=  event.description %></p>
+      <h3 class="Event_title"><%= event.name %></h3>
+      <p class="Event_description"><%=  event.description %></p>
     <% end %>
   <% end %>
-  <% unless @user.events_as_attendee.blank? %>
-    <h3>User attending this events: </h3>
-     <% @user.events_as_attendee.each do |event| %>
-      <h3><%= event.name %></h3>
+  <div class="Past_events">
+    <h2>Events attended:</h2>
+    <% @user.events_as_attendee.past.each do |event| %>
+      <h3 class="Event_title"><%= event.name %></h3>
+      <p class="Event_description"><%=  event.description %></p>
+      <h3><%= event.date %></h3>   
     <% end %>
-  <% end %> 
+  </div>
+  <div class="Future_events">
+    <h2>Upcoming events:</h2>
+    <% @user.events_as_attendee.future.each do |event| %>
+      <h3 class="Event_title"><%= event.name %></h3>
+      <p class="Event_description"><%=  event.description %></p>
+      <h3><%= event.date %></h3>
+    <% end %>
+  </div>
 </section>

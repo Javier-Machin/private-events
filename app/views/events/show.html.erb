@@ -6,9 +6,9 @@
     <h3><%= attendee.name %></h3>
   <% end %>
 <% end %>
-<% unless @event.attendees.blank? %>
+<% unless @event.invitations.blank? %>
   <h2>Users invited: </h2>
-  <% @event.attendees.each do |attendee| %>
-    <h3><%= attendee.name %></h3>
+  <% @event.invitations.each do |invitation| %>
+    <h3><%= invitation.invited_user.name %></h3>
   <% end %>
 <% end %>
