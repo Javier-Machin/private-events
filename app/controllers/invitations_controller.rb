@@ -5,9 +5,17 @@ class InvitationsController < ApplicationController
   end
 
   def create
-    @invitation = current_user.invitations.new(
-                  event: Event.find(params[:invitation][:event]), 
-                  invited_user: User.find_by(name: params[:invitation][:invited_user].downcase))
+    event = Event.find(params[:invitation][:event])
+    user =  User.find_by(name: params[:invitation][:invited_user])
+
+    @invitation = Invitation.new
+    
+    if user.events_as_attendee.find_by(id: event.id) == nil
+      @invitation = current_user.invitations.new(event: event, 
+                                                 invited_user: user)
+    else
+      flash.now[:notice] = "User already invited"
+    end
 
     if @invitation.save
       redirect_to @invitation
