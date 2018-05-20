@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if @user 
       log_in(@user)
       
-      redirect_to profile_path
+      redirect_to dashboard_path
     else
       render 'new'
     end

@@ -8,7 +8,7 @@
     <a href="<%= new_invitation_path %>">Invite Users</a>
     <span id="Current_user">Logged as: <%= current_user.name %></span>
     <span id="Logout_link"><%= link_to "Log out", logout_path, method: :delete %></span>
-    <span id="Profile_link"><%= link_to "My profile", profile_path %></span>
+    <span id="Profile_link"><%= link_to "Dashboard", dashboard_path %></span>
     <span id="Pending_link"><%= link_to "Pending Invitations", pending_path %></span>
   <% end %>
 </div>

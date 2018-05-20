@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post   '/login',      to: 'sessions#create'
   get    '/signup',     to: 'users#new'
   post   '/signup',     to: 'users#create'
-  get    '/profile',    to: 'users#show'
+  get    '/dashboard',  to: 'users#show'
   delete '/logout',     to: 'sessions#destroy'
   get    '/pending',    to: 'users#pending_invitations'
   patch  '/accept_inv', to: 'users#accept_invitation'
