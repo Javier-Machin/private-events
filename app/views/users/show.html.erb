@@ -1,26 +1,19 @@
-<section class="user_info">
-  <h2>WELCOME <%= @user.name %>!</h2>
-  <% unless @user.events.blank? %>
-    <h3>Your events: </h3>
-    <% @user.events.each do |event| %>
-      <h3 class="Event_title"><%= event.name %></h3>
-      <p class="Event_description"><%=  event.description %></p>
-    <% end %>
-  <% end %>
-  <div class="Past_events">
-    <h2>Events attended:</h2>
-    <% @user.events_as_attendee.past.each do |event| %>
-      <h3 class="Event_title"><%= event.name %></h3>
-      <p class="Event_description"><%=  event.description %></p>
-      <h3><%= event.date %></h3>   
-    <% end %>
+<div class="Background">
+  <div class="Main_container">
+    <h1 class="Title">WELCOME <%= @user.name %>!</h1>
+    <div class="Grid_container">
+      <div class="Grid_item" id="Grid_item1">
+        <h2><%= link_to "YOUR EVENTS", events_path, class: "Event_title" %></h2>
+      </div>
+      <div class="Grid_item" id="Grid_item2">
+        <h2><%= link_to "PAST EVENTS", events_path, class: "Event_title" %></h2>
+      </div>
+      <div class="Grid_item" id="Grid_item3">
+        <h2><%= link_to "FUTURE EVENTS", events_path, class: "Event_title" %></h2>  
+      </div>
+      <div class="Grid_item" id="Grid_item4">
+        <h2><%= link_to "INVITE YOUR FRIENDS",new_invitation_path, class: "Event_title" %></h2>
+      </div>
+    </div>
   </div>
-  <div class="Future_events">
-    <h2>Upcoming events:</h2>
-    <% @user.events_as_attendee.future.each do |event| %>
-      <h3 class="Event_title"><%= event.name %></h3>
-      <p class="Event_description"><%=  event.description %></p>
-      <h3><%= event.date %></h3>
-    <% end %>
-  </div>
-</section>
+</div>
