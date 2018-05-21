@@ -1,6 +1,6 @@
-<div class="Navbar">
-  <a href="<%= root_path %>">Home</a>  
+<div class="Navbar"> 
   <% if current_user.nil? %>
+    <a href="<%= root_path %>">Home</a> 
     <a href="<%= login_path %>">Login</a>
     <a href="<%= signup_path %>">Sign up</a>
   <% else %>

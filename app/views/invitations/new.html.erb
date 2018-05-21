@@ -1,3 +1,4 @@
+<%= image_tag "dashboard1.jpg", class: "Image_dashboard" %>
 <%= form_for @invitation do |f| %>
   <%= f.label :event, 'Event: ' %>
   <%= f.collection_select :event, Event.where("creator_id = ?", @current_user.id), :id, :name %>
@@ -5,7 +6,6 @@
   <%= f.text_field :invited_user %>
   <%= f.submit "Submit" %>
 <% end %>
-
 <ul>
   <% @invitation.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>

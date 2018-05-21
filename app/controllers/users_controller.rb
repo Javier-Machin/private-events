@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:pending_invitation]
+  before_action :logged_in_user, only: [:pending_invitation, :dashboard]
   
   def new
     @user = User.new 
@@ -9,14 +9,25 @@ class UsersController < ApplicationController
     @user = User.new(name: params[:user][:name], email: params[:user][:email].downcase)
 
     if @user.save
-      redirect_to @user
+      log_in(@user)
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
   def show
-    @user = current_user
+  end
+
+  def dashboard
+  end
+
+  def home
+    unless current_user.nil?
+      redirect_to dashboard_path
+    else
+      render :home
+    end
   end
 
   def pending_invitations

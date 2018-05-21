@@ -1,0 +1,26 @@
+<div class="Home_container">
+  <%= image_tag "home1.jpg", class: "Image_home" %>
+  <h1 class="Home_title">Social Boost</h1>
+  <div class="Home_window">  
+
+    <section class="Home_description">
+      Welcome to Social Boost, a proof of concept Ruby on Rails app 
+      where the users can:
+      <ul>
+        <li>Sign up</li>
+        <li>Log in (only email required for simplicity)</li>
+        <li>Create events</li>
+        <li>Keep track of past and upcoming events</li>
+        <li>The creator of the event can invite other registered users</li>
+      </ul>
+      <a href=<%= signup_path %>>Create your own user</a> 
+      or use the examples to <a href=<%= login_path %>> log in</a>:
+      <ul>
+        <li>example1@mail.com (User1)</li>
+        <li>example2@mail.com (User2)</li>
+      </ul> 
+      to <a href=<%= login_path %>> log in.</a><br>Only the creator, 
+      attending or invited users can see events.
+    </section>
+  </div>
+</div> 

@@ -8,20 +8,67 @@ a {
   text-decoration: none;
 }
 
-.image {
-  /* Set rules to fill background */
+.Image_login {
   min-height: 100%;
-  min-width: 1024px;
-  
-  /* Set up proportionate scaling */
+  min-width: 1280px;
   width: 100%;
   height: auto;
-  
-  /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.Image_home {
+  min-height: 100%;
+  min-width: 1280px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
+
+.Image_dashboard {
+  min-height: 100%;
+  min-width: 1280px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.Home_title {
+  font-size: 80px;
+  color: white;
+  background-color: #5f27cd;
+  opacity: 0.95;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Home_container {
+  text-align: center;
+}
+
+.Home_window {
+  display: inline-block;
+  height: 100%;
+  width: 45%;
+  border: 5px solid #5f27cd;
+  border-top: 0;
+  border-radius: 1px;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.Home_description {
+  text-align: left;
+  font-size: 35px;
+  margin: 2% 3% 2% 3%;
 }
 
 .Signup_container {
@@ -37,6 +84,7 @@ a {
   display: inline-block;
   text-align: center;
   font-size: 30px;
+  color: #5f27cd;
   background-color: white;
   padding: 100px;
   background-color: rgba(255,255,255,0.87);
@@ -48,14 +96,19 @@ a {
 }
 
 .Submit_button {
-  border: 3px solid black;
+  border: 3px solid #5f27cd;
   border-radius: 5px;
   font-weight: bold;
+  color: #5f27cd;
   background: white;
 }
 
 .Alert {
-  color: red;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: #5f27cd;
+  font-size: 30px;
 }
 
 .Navbar {
@@ -63,6 +116,7 @@ a {
   border-bottom: 1px solid black;
   font-size: 20px;
   padding: 5px;
+  z-index: 10;
 }
 
 #Current_user {
@@ -86,9 +140,13 @@ a {
   float: right;
 }
 
+.Background {
+  
+}
+
 .Title {
   text-align: center;
-  background-color: #576574;
+  background-color: #5f27cd;
   color: white;
   height: 10%;
   font-size: 55px;
@@ -98,11 +156,11 @@ a {
 .Main_container {
   background-color: white;
   position: absolute;
-  width: 80%;
+  width: 60%;
   height: 80%;
   top: 10%;
-  left: 10%;
-  border: 0px solid grey;
+  left: 20%;
+  border: 5px solid #5f27cd;
   border-radius: 5px;
   box-shadow: 5px 5px 18px 1px; 
 }
@@ -122,6 +180,7 @@ a {
   background-color: white;
   text-decoration: none;
   font-size: 25px;
+  border: 2px solid #5f27cd;
 }
 
 #Grid_item1 {

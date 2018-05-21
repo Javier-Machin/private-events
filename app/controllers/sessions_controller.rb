@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
       
       redirect_to dashboard_path
     else
+      flash.now[:alert] = "User doesn't exist"
       render 'new'
     end
   end
