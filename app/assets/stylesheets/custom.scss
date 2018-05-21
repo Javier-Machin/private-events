@@ -2,10 +2,64 @@ html, body {
   height: 100%;
   margin: 0px;
   font-family: 'Play', sans-serif;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+.Alert {
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: #5f27cd;
+  font-size: 30px;
+}
+
+.Navbar {
+  background-color: #576574;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  z-index: 10;
+}
+
+#Current_user {
+  color: white;
+}
+
+.Navbar a, .Navbar p, {
+  color: white; 
+  border: 0px solid black;
+  border-radius: 3px;
+  padding: 5px 5px 7px 5px;
+  transition: color 0.5s, background 0.5s;
+}
+
+.Navbar a:hover, .Navbar p:hover {
+  color: black;
+  background: #c8d6e5;
+}
+
+.Navbar #Current_user, .Navbar #Logout_link, .Navbar #Profile_link {
+  float: right;
+  margin-right: 10px;
+}
+
+.Footer {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  background-color: #5f27cd;
+  position: fixed;
+  width: 100%;
+  padding: 5px;
+  bottom: 0;
+  border-top: 2px solid rgba(0,0,0,0.3);
 }
 
 .Image_login {
@@ -25,6 +79,7 @@ a {
   width: 100%;
   height: auto;
   position: fixed;
+  opacity: 0.6;
   top: 0px;
   left: 0;
   z-index: -1;
@@ -47,34 +102,39 @@ a {
   color: white;
   background-color: #5f27cd;
   opacity: 0.95;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid rgba(0,0,0,0.3);
 }
 
 .Home_container {
   text-align: center;
+  margin-top: 30px;
+  height: 100%;
 }
 
 .Home_window {
   display: inline-block;
   height: 100%;
   width: 45%;
-  border: 5px solid #5f27cd;
   border-top: 0;
   border-radius: 1px;
   background-color: rgba(255,255,255,0.9);
+  overflow: auto;
 }
 
 .Home_description {
   text-align: left;
-  font-size: 35px;
-  margin: 2% 3% 2% 3%;
+  font-size: 25px;
+  margin: 6%;
+  border-top: 3px solid #5f27cd;
+  border-bottom: 2px solid #5f27cd;
 }
 
 .Signup_container {
   text-align: center;
   width: 100%;
-  margin-top: 1%;
+  margin-top: 50px;
 }
 
 .Signup_form {
@@ -103,43 +163,6 @@ a {
   background: white;
 }
 
-.Alert {
-  color: white;
-  width: 100%;
-  text-align: center;
-  background: #5f27cd;
-  font-size: 30px;
-}
-
-.Navbar {
-  background-color: #576574;
-  border-bottom: 1px solid black;
-  font-size: 20px;
-  padding: 5px;
-  z-index: 10;
-}
-
-#Current_user {
-  color: white;
-}
-
-.Navbar a, .Navbar p, {
-  color: white; 
-  border: 0px solid black;
-  border-radius: 3px;
-  padding: 5px 5px 7px 5px;
-  transition: color 0.5s, background 0.5s;
-}
-
-.Navbar a:hover, .Navbar p:hover {
-  color: black;
-  background: #c8d6e5;
-}
-
-.Navbar #Current_user, .Navbar #Logout_link, .Navbar #Profile_link {
-  float: right;
-}
-
 .Background {
   
 }
@@ -148,39 +171,41 @@ a {
   text-align: center;
   background-color: #5f27cd;
   color: white;
-  height: 10%;
   font-size: 55px;
   margin: 0px;
 }
 
 .Main_container {
   background-color: white;
-  position: absolute;
-  width: 60%;
-  height: 80%;
-  top: 10%;
-  left: 20%;
+  position: relative;
+  width: 50%;
+  height: 100%;
   border: 5px solid #5f27cd;
   border-radius: 5px;
-  box-shadow: 5px 5px 18px 1px; 
+  box-shadow: 5px 5px 18px 1px;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .Grid_container {
-  margin-top: 0px;
+  margin: 0;  
   width: 100%;
-  height: 90%;
-  display: grid;
+  height: 100%;
+  display: inline-grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   overflow: hidden;
 }
 
 .Grid_item {
+  margin: 0; 
   text-align: center;
   background-color: white;
   text-decoration: none;
   font-size: 25px;
   border: 2px solid #5f27cd;
+  padding: 35px;
 }
 
 #Grid_item1 {
@@ -200,17 +225,17 @@ a {
 }
 
 .Grid_container h2 a {
-  color: rgba(0,0,0,0.8); 
+  color: rgba(0,0,0,0.7); 
 }
 
 .Grid_container h2 {
   display: inline-block;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .Grid_container h2:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .logo {
