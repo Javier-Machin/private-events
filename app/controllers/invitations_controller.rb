@@ -21,13 +21,14 @@ class InvitationsController < ApplicationController
     end
 
     if @invitation.save
+      flash[:notice] = "Invitation sent"
       redirect_to new_invitation_path
     else
       render :new
     end
 
   end
-  
+
   def index
     redirect_to dashboard_path
   end
