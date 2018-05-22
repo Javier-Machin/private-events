@@ -118,7 +118,8 @@ a {
 .Home_window {
   display: inline-block;
   height: 100%;
-  width: 45%;
+  width: 90%;
+  max-width: 800px;
   border-top: 0;
   border-radius: 1px;
   background-color: rgba(255,255,255,0.9);

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
                                      date: params[:event][:date])
 
     if @event.save
-      redirect_to @event
+      redirect_to events_path
     else
       render :new
     end
