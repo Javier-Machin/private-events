@@ -10,22 +10,36 @@ class InvitationsController < ApplicationController
 
     @invitation = Invitation.new
     
-    if user.events_as_attendee.find_by(id: event.id) == nil
+    if user && user.events_as_attendee.find_by(id: event.id) == nil &&
+               user.invitations_received.find_by(event: event) == nil
       @invitation = current_user.invitations.new(event: event, 
                                                  invited_user: user)
-    else
+    elsif user
       flash.now[:notice] = "User already invited"
+    else
+      flash.now[:notice] = "User doesn't exist"
     end
 
     if @invitation.save
-      redirect_to @invitation
+      redirect_to new_invitation_path
     else
       render :new
     end
+
+  end
+  
+  def index
+    redirect_to dashboard_path
   end
 
   def show
-    @invitation = Invitation.find(params[:id])
+    redirect_to dashboard_path
+  end
+
+  def destroy
+    @invitation = Invitation.find(params[:id]).destroy
+    flash[:notice]= "Invitation declined"
+    redirect_to pending_path
   end
   
 end

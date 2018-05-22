@@ -1,13 +1,12 @@
 <div class="Events_container">
-  <h1>Created events</h1> 
+  <h1>Upcoming Events</h1>
   <div class="Events_window">
-    <%= link_to 'Create a new event +', new_event_path, class: "Submit_button"  %>
     <%= image_tag "dashboard1.jpg", class: "Image_dashboard" %>
     <% @events.each do |event| %>
       <div class="Events_card">
         <div class="Events_content">
-          <h3><%= event.name %></h3>
-          <h3><%= event.description %></h3>
+          <h3>Event: <%= event.name %></h3>
+          <h3>Description: <%= event.description %></h3>
           <h3>Date: <%= event.date %></h3>
         </div>
       </div>

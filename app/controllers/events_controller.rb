@@ -6,8 +6,7 @@ class EventsController < ApplicationController
   end
 
   def index
-    @past_events = Event.past
-    @future_events = Event.future
+    @events = Event.where(creator_id: current_user.id)
   end
 
   def create
@@ -20,11 +19,6 @@ class EventsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show 
-    @event = Event.find(params[:id])
-    redirect_to root_path if @event.creator != current_user
   end
 
 end

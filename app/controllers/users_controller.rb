@@ -16,10 +16,15 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
+  def dashboard
   end
 
-  def dashboard
+  def attended_events
+    @events = current_user.events_as_attendee.past
+  end
+
+  def upcoming_events
+    @events = current_user.events_as_attendee.future
   end
 
   def home

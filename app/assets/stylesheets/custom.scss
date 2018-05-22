@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0px;
   font-family: 'Play', sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
 a {
@@ -10,10 +10,11 @@ a {
 }
 
 .Alert {
-  color: white;
+  position: absolute;
+  top: 65px;
+  color: #5f27cd;
   width: 100%;
   text-align: center;
-  background: #5f27cd;
   font-size: 30px;
 }
 
@@ -111,6 +112,7 @@ a {
   text-align: center;
   margin-top: 30px;
   height: 100%;
+
 }
 
 .Home_window {
@@ -153,7 +155,98 @@ a {
 .Signup_form input {
   font-size: 40px;
   border-radius: 5px;
+  text-align: center;
 }
+
+.Invitation_container, .Event_container, .Pending_container, .Events_container  {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.Event_container {
+  margin-top: 0;
+}
+
+.Invitation_form, .Event_form , .Pending_window, .Events_window {
+  border: 0px solid black;
+  border-radius: 15px;
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+  font-size: 25px;
+  color: rgba(0,0,0,0.8);
+  background-color: white;
+  padding: 100px;
+  background-color: rgba(255,255,255,0.87);
+  overflow: hidden;
+}
+
+.Invitation_container h1, .Event_container h1, .Pending_container h1, 
+                          .Signup_container h1, .Events_container h1 {
+  position: absolute;
+  width: 100%;
+  background-color: #5f27cd;
+  color: white;
+  margin: 0;
+  top: 30px;
+  font-size: 55px;
+  overflow: visible;
+}
+
+.Invitation_form input, .Event_form input {
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.Invitation_card, .Events_card {
+  border-bottom: 4px solid #5f27cd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Invitation_content .Submit_button {
+  margin: 10px;
+}
+
+.Invitation_content {
+  margin: 20px;
+}
+
+.Event_form textarea {
+  font-size: 25px;
+  border-radius: 5px;
+  border: 2px solid rgba(0,0,0,0.5);
+}
+
+.Events_window {
+  text-align: center;
+}
+
+.Events_window .Submit_button {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.Events_content {
+  text-align: left;
+}
+
+select {
+  border: 3px solid #5f27cd;
+  border-radius: 5px;
+  color: #5f27cd;
+  background: white;
+  font-size: 25px;
+}
+
 
 .Submit_button {
   border: 3px solid #5f27cd;
