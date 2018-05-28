@@ -1,24 +1,25 @@
-# README
+# Social Boost / private-events 
+Rails app made to showcase advanced database relations
+where we can:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Sign up new users
+* Log in
+* Create events
+* Keep track of past and upcoming events
+* Invite other users to the events
+* Accept or decline pending invitations
 
-Things you may want to cover:
+You can [check it online here](https://social-boost-app.herokuapp.com/) (It can take a bit to load as Heroku starts a dyno)
 
-* Ruby version
+The seeds include 2 example users usable to log in:
 
-* System dependencies
+* example1@mail.com (User1)
+* example2@mail.com (User2)
 
-* Configuration
+Or you can clone the repo and run:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. $bundle install
+1. $rails db:migrate
+1. $rails db:seed
+1. $rails server
+1. Go to http://localhost:3000/ in your web browser
