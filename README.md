@@ -3,6 +3,7 @@ Rails app made to showcase advanced database relations
 where we can:
 
 * Sign up new users
+* Send confirmation email (no action required)
 * Log in
 * Create events
 * Keep track of past and upcoming events
