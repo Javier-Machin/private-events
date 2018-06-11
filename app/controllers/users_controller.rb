@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in(@user)
+      UserMailer.with(user: @user).welcome_email.deliver_later
       redirect_to dashboard_path
     else
       render :new
