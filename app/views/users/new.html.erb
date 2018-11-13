@@ -3,8 +3,8 @@
     <%= image_tag "login1.jpg", class: "Image_login" %>
     <%= form_for @user do |f| %>
       <h3>Sing up</h3><br/>
-      <%= f.text_field :name, placeholder: "USER NAME" %><br/><br/>
-      <%= f.text_field :email, placeholder: "EMAIL" %><br/><br/>
+      <%= f.text_field :name, placeholder: "USER NAME", required: true %><br/><br/>
+      <%= f.text_field :email, placeholder: "EMAIL", required: true %><br/><br/>
       <%= f.submit "Sing up", class: "Submit_button" %>
     <% end %>
     <ul>

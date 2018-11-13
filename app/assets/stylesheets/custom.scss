@@ -52,11 +52,11 @@ a {
 
 .Alert {
   position: absolute;
-  top: 65px;
+  top: 55px;
   color: #5f27cd;
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 3.6rem;
 }
 
 .Navbar {
@@ -347,6 +347,7 @@ select {
   color: #5f27cd;
   background: white;
   padding: .3rem 1rem;
+  cursor: pointer;
 }
 
 .Title {

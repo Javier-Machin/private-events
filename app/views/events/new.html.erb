@@ -5,9 +5,9 @@
     <h1>New Event</h1><br />
     <%= form_for(@event) do |f| %>
       <%= f.label :name, 'Event name: ' %><br />
-      <%= f.text_field :name %><br />
+      <%= f.text_field :name, required: true %><br />
       <%= f.label :description, 'Event description: ' %><br />
-      <%= f.text_area :description, size: "20x6" %><br />
+      <%= f.text_area :description, size: "20x6", required: true %><br />
       <%= f.label :date, 'Event date: ' %><br />
       <%= f.date_field :date, min: Date.today %> <br /><br />
       <%= f.submit "Submit", class: "Submit_button" %>

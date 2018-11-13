@@ -3,7 +3,7 @@
     <%= image_tag "login1.jpg", class: "Image_login" %>
     <%= form_for(:session, url: login_path) do |f| %>
       <h3>Log in</h3><br/>
-      <%= f.text_field :email, placeholder: "EMAIL" %><br/><br/>
+      <%= f.text_field :email, placeholder: "EMAIL", required: true %><br/><br/>
       <%= f.submit "Log in", class: "Submit_button" %>
     <% end %>
   </div>
