@@ -437,7 +437,7 @@ select {
 
 .dashboard-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
 
   & .Title {
     font-size: 5rem;
@@ -447,7 +447,7 @@ select {
     font-size: 3rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
     & {
       margin-top: 10.5rem;
     }
