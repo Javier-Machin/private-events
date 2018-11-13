@@ -1,5 +1,5 @@
 <div class="Navbar">
-  <span class="navbar-title">Social Boost</span> 
+  <span class="navbar-title"><%= link_to "Social Boost", dashboard_path%></span> 
   <% if current_user.nil? %>
     <nav class="navbar-links">
       <a href="<%= root_path %>">Home</a> 

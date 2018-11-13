@@ -75,11 +75,15 @@ a {
   min-width: 350px;
 }
 
-.navbar-title {
+.navbar-title a {
   font-family: 'Play', sans-serif;
-  color: #5f27cd;
-  font-size: 3rem;
+  color: #5f27cd !important;
+  font-size: 3.5rem;
   font-weight: 600;
+
+  &:hover {
+    background-color: transparent !important;
+  }
 }
 
 #Current_user {
