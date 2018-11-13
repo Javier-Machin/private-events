@@ -1,15 +1,16 @@
 <%= image_tag "dashboard1.jpg", class: "Image_dashboard" %>
 <div class="Event_container">
-  <h1>New Event</h1>
+  
   <div class="Event_form">
+    <h1>New Event</h1><br />
     <%= form_for(@event) do |f| %>
-      <h2><%= f.label :name, 'Event name: ' %></h2>
-      <%= f.text_field :name %>
-      <h2><%= f.label :description, 'Event description: ' %></h2> 
-      <%= f.text_area :description, size: "20x6" %>
-      <h2><%= f.label :date, 'Event date: ' %></h2>
-      <%= f.date_field :date, min: Date.today %> 
-      <h2><%= f.submit "Submit", class: "Submit_button" %></h2>
+      <%= f.label :name, 'Event name: ' %><br />
+      <%= f.text_field :name %><br />
+      <%= f.label :description, 'Event description: ' %><br />
+      <%= f.text_area :description, size: "20x6" %><br />
+      <%= f.label :date, 'Event date: ' %><br />
+      <%= f.date_field :date, min: Date.today %> <br /><br />
+      <%= f.submit "Submit", class: "Submit_button" %>
     <% end %>
   </div>
   <ul>

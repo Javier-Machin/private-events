@@ -1,7 +1,7 @@
 <div class="Events_container">
-  <h1>Created events</h1> 
+  <%= link_to 'Create a new event +', new_event_path, class: "new-event-button"  %> 
   <div class="Events_window">
-    <%= link_to 'Create a new event +', new_event_path, class: "Submit_button"  %>
+    <h1>Created events</h1><br />
     <%= image_tag "dashboard1.jpg", class: "Image_dashboard" %>
     <% @events.each do |event| %>
       <div class="Events_card">

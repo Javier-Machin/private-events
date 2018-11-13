@@ -1,8 +1,49 @@
-html, body {
-  height: 100%;
-  margin: 0px;
-  font-family: 'Play', sans-serif;
-  overflow: auto;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 320px;
+}
+
+@media only screen and (max-width: 1250px) {
+  html {
+    font-size: 47%;
+  }
+}
+
+@media only screen and (max-width: 835px) {
+  html {
+    font-size: 42%;
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  html {
+    font-size: 37%;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  html {
+    font-size: 33%;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 95vh;
 }
 
 a {
@@ -19,23 +60,38 @@ a {
 }
 
 .Navbar {
-  background-color: #576574;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  background-color: white;
+  border-bottom: 3px solid #5f27cd;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   font-size: 20px;
   padding: 5px;
   z-index: 10;
+  height: 60px;
+  min-width: 350px;
+}
+
+.navbar-title {
+  font-family: 'Play', sans-serif;
+  color: #5f27cd;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 #Current_user {
-  color: white;
+  @media only screen and (max-width: 835px) {
+    & {
+      display: none;
+    }  
+  }
 }
 
 .Navbar a, .Navbar p, {
-  color: white; 
-  border: 0px solid black;
+  color: black; 
   border-radius: 3px;
   padding: 5px 5px 7px 5px;
   transition: color 0.5s, background 0.5s;
@@ -47,41 +103,52 @@ a {
 }
 
 .Navbar #Current_user, .Navbar #Logout_link, .Navbar #Profile_link {
-  float: right;
-  margin-right: 10px;
+  color: rgb(25,25,25);
+}
+
+.navbar-links {
+  font-family: 'Play', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 835px) {
+    & {
+      letter-spacing: 1px;
+      font-size: 1.6rem;
+    }  
+  }
 }
 
 .Footer {
   display: block;
   text-align: center;
-  font-size: 20px;
-  background-color: #5f27cd;
+  font-size: 1.8rem;
+  font-family: 'Play', sans-serif;
+  background-color: rgb(250,250,250);
+  color: rgb(15,15,15);
   position: fixed;
   width: 100%;
   padding: 5px;
   bottom: 0;
-  border-top: 2px solid rgba(0,0,0,0.3);
 }
 
 .Image_login {
-  min-height: 100%;
-  min-width: 1280px;
   width: 100%;
-  height: auto;
+  min-width: 1200px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 0.6;
 }
 
 .Image_home {
-  min-height: 100%;
-  min-width: 1280px;
-  width: 100%;
-  height: auto;
   position: fixed;
+  width: 100%;
+  min-width: 1200px;
   opacity: 0.6;
-  top: 0px;
+  top: 0;
   left: 0;
   z-index: -1;
 }
@@ -92,58 +159,61 @@ a {
   width: 100%;
   height: auto;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   z-index: -1;
   opacity: 0.4;
 }
 
-.Home_title {
-  font-size: 80px;
-  color: white;
-  background-color: #5f27cd;
-  opacity: 0.95;
-  padding: 0;
-  margin: 0;
-  border-bottom: 3px solid rgba(0,0,0,0.3);
-}
-
 .Home_container {
   text-align: center;
   margin-top: 30px;
-  height: 100%;
-
 }
 
 .Home_window {
+  margin-top: 7rem;
   display: inline-block;
-  height: 100%;
-  width: 90%;
-  max-width: 800px;
-  border-top: 0;
+  border-top: 5px solid #5f27cd;
+  width: 100%;
+  max-width: 700px;
   border-radius: 1px;
   background-color: rgba(255,255,255,0.9);
   overflow: auto;
+
+  @media only screen and (max-width: 700px) {
+    & {
+      margin-top: 1.5rem;
+    }
+  }
 }
 
 .Home_description {
+  font-family: sans-serif;
   text-align: left;
-  font-size: 25px;
-  margin: 6%;
-  border-top: 3px solid #5f27cd;
-  border-bottom: 2px solid #5f27cd;
+  font-size: 2rem;
+  padding: 5rem;
+  margin: 0 0 2rem 0;
+  
+  & p {
+    font-size: 2.5rem;
+  }
+
+  & li {
+    margin-left: 3rem;
+  }
 }
 
 .Signup_container {
   text-align: center;
   width: 100%;
-  margin-top: 50px;
+  
 }
 
 .Signup_form {
-  border: 0px solid black;
-  border-radius: 15px;
-  width: 30%;
+  margin-top: 10rem;
+  border-top: 5px solid #5f27cd;
+  width: 100%;
+  max-width: 520px;
   display: inline-block;
   text-align: center;
   font-size: 30px;
@@ -151,11 +221,24 @@ a {
   background-color: white;
   padding: 100px;
   background-color: rgba(255,255,255,0.87);
+
+  & label {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+  }
+
+  & h3 {
+    font-size: 3.5rem;
+  }
 }
 
 .Signup_form input {
-  font-size: 40px;
-  border-radius: 5px;
+  border-radius: 2px;
+  font-size: 2.8rem;
+  padding: 2px 16px;
+  cursor: pointer;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -172,31 +255,34 @@ a {
 .Invitation_form, .Event_form , .Pending_window, .Events_window {
   border: 0px solid black;
   border-radius: 15px;
-  width: 30%;
+  width: 100%;
+  max-width: 700px;
   display: inline-block;
   text-align: left;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: rgba(0,0,0,0.8);
   background-color: white;
-  padding: 100px;
+  padding: 4rem;
   background-color: rgba(255,255,255,0.87);
   overflow: hidden;
-}
+  margin-top: 4rem;
 
-.Invitation_container h1, .Event_container h1, .Pending_container h1, 
-                          .Signup_container h1, .Events_container h1 {
-  position: absolute;
-  width: 100%;
-  background-color: #5f27cd;
-  color: white;
-  margin: 0;
-  top: 30px;
-  font-size: 55px;
-  overflow: visible;
+  & h1 {
+    position: relative;
+    top: 0;
+    text-align: center;
+    display: block;
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    margin-top: 2rem;
+    border-radius: 0;
+  }
 }
 
 .Invitation_form input, .Event_form input {
-  font-size: 30px;
+  font-size: 3rem;
   border-radius: 5px;
 }
 
@@ -245,16 +331,17 @@ select {
   border-radius: 5px;
   color: #5f27cd;
   background: white;
-  font-size: 25px;
+  font-size: 3rem;
 }
-
 
 .Submit_button {
   border: 3px solid #5f27cd;
+  font-size: 2rem;
   border-radius: 5px;
   font-weight: bold;
   color: #5f27cd;
   background: white;
+  padding: .3rem 1rem;
 }
 
 .Title {
@@ -269,7 +356,6 @@ select {
   background-color: white;
   position: relative;
   width: 50%;
-  height: 100%;
   border: 5px solid #5f27cd;
   border-radius: 5px;
   box-shadow: 5px 5px 18px 1px;
@@ -295,7 +381,7 @@ select {
   text-decoration: none;
   font-size: 25px;
   border: 2px solid #5f27cd;
-  padding: 35px;
+  padding: 4rem 2rem;
 }
 
 #Grid_item1 {
@@ -315,7 +401,8 @@ select {
 }
 
 .Grid_container h2 a {
-  color: rgba(0,0,0,0.7); 
+  color: rgba(0,0,0,0.7);
+  font-family: sans-serif; 
 }
 
 .Grid_container h2 {
@@ -342,4 +429,41 @@ select {
 
 .logo svg:hover {
   transform: scale(1.3);
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 600px;
+
+  & .Title {
+    font-size: 5rem;
+  }
+
+  & .Event_title {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    & {
+      margin-top: 10.5rem;
+    }
+  }
+}
+
+a.new-event-button  {
+  position: fixed;
+  display: block;
+  top: 60px;
+  font-size: 3rem;
+  font-family: 'Play', sans-serif;
+  left: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: orange;
+  width: 100%;
+  color: white;
+}
+
+.Event_form {
+  margin-top: 10rem;
 }

@@ -1,13 +1,14 @@
 <div class="Pending_container">
-  <h1>Pending invitations</h1>
+  
   <div class="Pending_window">
+    <h1>Pending invitations</h1><br />
     <%= image_tag "dashboard1.jpg", class: "Image_dashboard" %>
     <% @invitations.each do |inv| %>
       <div class="Invitation_card">
         <div class="Invitation_content">
-          <h3><%= inv.event.name %></h3>
-          <h3>Invited by: <%= inv.user.name %></h3>
-          <h3>Date: <%= inv.event.date %></h3>
+          <h3><%= inv.event.name %></h3><br />
+          <h3>Invited by: <%= inv.user.name %></h3><br />
+          <h3>Date: <%= inv.event.date %></h3><br />
           <%= link_to 'Accept Invitation', accept_inv_path(id: inv.id), method: :patch, class: "Submit_button"  %>
           <%= link_to 'Decline', inv, method: :delete, class: "Submit_button", data: { confirm: 'Are you sure?' } %>
         </div>
