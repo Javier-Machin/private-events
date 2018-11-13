@@ -260,7 +260,7 @@ a {
   border: 0px solid black;
   border-radius: 15px;
   width: 100%;
-  max-width: 700px;
+  max-width: 650px;
   display: inline-block;
   text-align: left;
   font-size: 2.5rem;
@@ -270,6 +270,7 @@ a {
   background-color: rgba(255,255,255,0.87);
   overflow: hidden;
   margin-top: 4rem;
+  font-family: sans-serif;
 
   & h1 {
     position: relative;
@@ -279,7 +280,7 @@ a {
     font-size: 4rem;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 650px) {
     margin-top: 2rem;
     border-radius: 0;
   }
