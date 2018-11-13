@@ -72,7 +72,6 @@ a {
   padding: 5px;
   z-index: 10;
   height: 60px;
-  min-width: 350px;
 }
 
 .navbar-title a {
@@ -80,9 +79,16 @@ a {
   color: #5f27cd !important;
   font-size: 3.5rem;
   font-weight: 600;
+  white-space: nowrap;
 
   &:hover {
     background-color: transparent !important;
+  }
+
+  @media only screen and (max-width: 835px) {
+    & {
+      font-size: 2.6rem;
+    }  
   }
 }
 
@@ -118,8 +124,10 @@ a {
 
   @media only screen and (max-width: 835px) {
     & {
-      letter-spacing: 1px;
-      font-size: 1.6rem;
+      letter-spacing: .8px;
+      font-size: 1.5rem;
+      padding: 3px;
+      white-space: nowrap;
     }  
   }
 }
