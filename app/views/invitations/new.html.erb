@@ -3,12 +3,12 @@
   
   <div class="Invitation_form">
     <%= form_for @invitation do |f| %>
-      <h1>Invite user</h1><br />
-      <%= f.label :event, 'Event: ' %><br /><br />
-      <%= f.collection_select :event, Event.where("creator_id = ?", @current_user.id), :id, :name, class: "Form_select" %><br /><br />
-      <%= f.label :invited_user, 'Invitation for: ' %><br /><br />
-      <%= f.text_field :invited_user , required: true %><br /><br />
-      <%= f.submit "Submit", class: "Submit_button" %>
+      <h1>Invite user</h1>
+      <%= f.label :event, 'Event: ', class: "invitation-form-element" %>
+      <%= f.collection_select :event, Event.where("creator_id = ?", @current_user.id), :id, :name, class: "invitation-form-element Form_select" %>
+      <%= f.label :invited_user, 'Invitation for: ', class: "invitation-form-element" %>
+      <%= f.text_field :invited_user , required: true, class: "invitation-form-element" %>
+      <%= f.submit "Submit", class: "Submit_button invitation-form-element" %>
     <% end %>
   </div>
 </div>

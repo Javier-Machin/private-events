@@ -13,7 +13,7 @@
   <body>
     <%= render 'layouts/navbar' %>
     <% flash.each do |message_type, message| %>
-      <%= content_tag(:h3, message, class: "Alert") %>
+      <%= content_tag(:p, message, class: "Alert") %>
     <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
