@@ -9,8 +9,6 @@ where we can:
 * Invite other users to the events
 * Accept or decline pending invitations
 
-You can [check it online here](https://social-boost-app.herokuapp.com/) (It can take a bit to load as Heroku starts a dyno)
-
 The seeds include 2 example users usable to log in:
 
 * example1@mail.com (User1)
@@ -38,8 +36,6 @@ Aplicación Rails donde podemos:
 * Realizar seguimiento de pasados y futuros eventos
 * Invitar otros usuarios a los eventos
 * Aceptar o rechazar invitaciones
-
-[Pruébela online](https://social-boost-app.herokuapp.com/) (Puede tardar un poco en cargar mientras Heroku crea una máquina virtual)
 
 Las semillas incluyen 2 usuarios:
 
